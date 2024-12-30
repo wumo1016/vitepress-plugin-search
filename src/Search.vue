@@ -226,7 +226,7 @@ const handleNavigation = (e: KeyboardEvent) => {
                     }}</span>
                     <div style="width: 100%">
                       <h3>{{ item.title }}</h3>
-                      <p> <div v-html="item.preview"></div> </p>
+                      <div class="VPPluginSearch-search-item-preview"><div v-html="item.preview"></div></div>
                     </div>
                     <span class="VPPluginSearch-search-item-icon">↪</span>
                   </div>
@@ -308,7 +308,7 @@ const handleNavigation = (e: KeyboardEvent) => {
   background-color: var(--vp-custom-block-details-bg);
 }
 
-.VPPluginSearch-search-item p {
+.VPPluginSearch-search-item .VPPluginSearch-search-item-preview {
   margin: 0px;
   font-size: smaller;
   color: var(--c-text-light-3);
@@ -321,11 +321,11 @@ a.link-focused .VPPluginSearch-search-item,
 }
 
 a.link-focused .VPPluginSearch-search-item,
-.VPPluginSearch-search-item:hover > p {
+.VPPluginSearch-search-item:hover > .VPPluginSearch-search-item-preview {
   color: #fff;
 }
 
-/* .dark .search-item > p {
+/* .dark .search-item > .VPPluginSearch-search-item-preview {
   color: var(--c-text-light-2);
 } */
 
